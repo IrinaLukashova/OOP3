@@ -1,7 +1,6 @@
 package src.main.java;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -29,8 +28,8 @@ public class Main {
         List<Student> studentList10 = new ArrayList<>();
         List<Student> studentList11 = new ArrayList<>();
 
-        StudentGroup group10 = new StudentGroup(studentList1,"10",34);
-        StudentGroup group11 = new StudentGroup(studentList2,"11",11);
+        StudentGroup group10 = new StudentGroup(studentList10,"10",34);
+        StudentGroup group11 = new StudentGroup(studentList11,"11",11);
 
         List<StudentGroup> studentGroups2 = new ArrayList<>();
         Stream stream2 = new Stream(studentGroups2);
@@ -41,7 +40,7 @@ public class Main {
         // третий поток
         List<Student> studentList56 = new ArrayList<>();
 
-        StudentGroup group134 = new StudentGroup(studentList1,"543",23);
+        StudentGroup group134 = new StudentGroup(studentList56,"543",23);
 
 
         List<StudentGroup> studentGroups3 = new ArrayList<>();
