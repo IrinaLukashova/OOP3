@@ -1,34 +1,19 @@
 package src.main.java;
 
-public class Student implements Comparable<Student>{
-    int studentId;
-    String firstName;
-    String secondName;
-    String lastName;
+public class Student extends User{
 
     public Student(int studentId, String firstName, String secondName, String lastName) {
-        this.studentId = studentId;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.lastName = lastName;
+        super(studentId, firstName,secondName,lastName);
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
-                ", firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                "studentId=" + super.userId +
+                ", firstName='" + super.getFirstName() + '\'' +
+                ", secondName='" + super.getSecondName() + '\'' +
+                ", lastName='" + super.getLastName() + '\'' +
                 '}';
     }
 
-    @Override
-    public int compareTo(Student o) {
-        if (studentId > o.studentId)
-            return 1;
-        if (studentId < o.studentId)
-            return -1;
-        return 0;
-    }
 }

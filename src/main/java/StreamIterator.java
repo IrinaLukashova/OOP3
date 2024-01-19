@@ -3,8 +3,8 @@ package src.main.java;
 import java.util.Iterator;
 import java.util.List;
 
-public class StreamIterator implements Iterator<StudentGroup> {
-    List<StudentGroup> studentGroupsList;
+public class StreamIterator implements Iterator<UserGroup> {
+    List<UserGroup> studentGroupsList;
     int counter;
 
     public StreamIterator(Stream stream) {
@@ -18,7 +18,7 @@ public class StreamIterator implements Iterator<StudentGroup> {
     }
 
     @Override
-    public StudentGroup next() {
+    public UserGroup next() {
         if (hasNext()){
             return studentGroupsList.get(counter++);
         }

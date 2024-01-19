@@ -3,14 +3,14 @@ package src.main.java;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroup implements Iterable<Student>{
-    List<Student> studentList;
+public class UserGroup<T extends User> implements Iterable<T>{
+    List<T> userList;
     String name;
     int number; //количество учеников в группе
 
 
-    public StudentGroup(List<Student> studentList, String name, int number) {
-        this.studentList = studentList;
+    public UserGroup(List<T> userList, String name, int number) {
+        this.userList = userList;
         this.name = name;
         this.number = number;
     }
@@ -18,7 +18,7 @@ public class StudentGroup implements Iterable<Student>{
         return "Group" + name;
     }
     @Override
-    public Iterator<Student> iterator() {
-        return new StudentGroupIterator(this);
+    public Iterator<T> iterator() {
+        return new UserGroupIterator<T>(this);
     }
 }

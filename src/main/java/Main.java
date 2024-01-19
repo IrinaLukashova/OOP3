@@ -5,65 +5,65 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // создаю первый поток: сначала списки учеников -> затем из них формирую группы -> из групп формирую поток и добавляю туда группы
-        List<Student> studentList1 = new ArrayList<>();
-        List<Student> studentList2 = new ArrayList<>();
-        List<Student> studentList3 = new ArrayList<>();
-        List<Student> studentList4 = new ArrayList<>();
+//        // создаю первый поток: сначала списки учеников -> затем из них формирую группы -> из групп формирую поток и добавляю туда группы
+//        List<Student> studentList1 = new ArrayList<>();
+//        List<Student> studentList2 = new ArrayList<>();
+//        List<Student> studentList3 = new ArrayList<>();
+//        List<Student> studentList4 = new ArrayList<>();
+//
+//        UserGroup group1 = new UserGroup(studentList1,"1",23);
+//        UserGroup group2 = new UserGroup(studentList2,"2",12);
+//        UserGroup group3 = new UserGroup(studentList3,"3", 22);
+//        UserGroup group4 = new UserGroup(studentList4,"4",31);
+//
+//        List<UserGroup> studentGroups1 = new ArrayList<>();
+//        Stream stream1 = new Stream(studentGroups1);
+//
+//        stream1.studentGroupsList.add(group1);
+//        stream1.studentGroupsList.add(group2);
+//        stream1.studentGroupsList.add(group3);
+//        stream1.studentGroupsList.add(group4);
+//
+//        // второй поток
+//        List<Student> studentList10 = new ArrayList<>();
+//        List<Student> studentList11 = new ArrayList<>();
+//
+//        UserGroup group10 = new UserGroup(studentList10,"10",34);
+//        UserGroup group11 = new UserGroup(studentList11,"11",11);
+//
+//        List<UserGroup> studentGroups2 = new ArrayList<>();
+//        Stream stream2 = new Stream(studentGroups2);
+//
+//        stream2.studentGroupsList.add(group10);
+//        stream2.studentGroupsList.add(group11);
+//
+//        // третий поток
+//        List<Student> studentList56 = new ArrayList<>();
+//
+//        UserGroup<Student> group134 = new UserGroup<Student>(studentList56,"543",23);
+//
+//
+//        List<UserGroup<Student>> studentGroups3 = new ArrayList<>();
+//        Stream stream3 = new Stream(studentGroups3);
+//
+//        stream3.studentGroupsList.add(group134);
 
-        StudentGroup group1 = new StudentGroup(studentList1,"1",23);
-        StudentGroup group2 = new StudentGroup(studentList2,"2",12);
-        StudentGroup group3 = new StudentGroup(studentList3,"3", 22);
-        StudentGroup group4 = new StudentGroup(studentList4,"4",31);
+//        // создаю список потоков и группу потоков по этому списку
+//        List<Stream> streamList = new ArrayList<>();
+//        StreamGroups streamGroups = new StreamGroups(streamList);
+//
+//        streamGroups.streamList.add(stream1);
+//        streamGroups.streamList.add(stream2);
+//        streamGroups.streamList.add(stream3);
 
-        List<StudentGroup> studentGroups1 = new ArrayList<>();
-        Stream stream1 = new Stream(studentGroups1);
-
-        stream1.studentGroupsList.add(group1);
-        stream1.studentGroupsList.add(group2);
-        stream1.studentGroupsList.add(group3);
-        stream1.studentGroupsList.add(group4);
-
-        // второй поток
-        List<Student> studentList10 = new ArrayList<>();
-        List<Student> studentList11 = new ArrayList<>();
-
-        StudentGroup group10 = new StudentGroup(studentList10,"10",34);
-        StudentGroup group11 = new StudentGroup(studentList11,"11",11);
-
-        List<StudentGroup> studentGroups2 = new ArrayList<>();
-        Stream stream2 = new Stream(studentGroups2);
-
-        stream2.studentGroupsList.add(group10);
-        stream2.studentGroupsList.add(group11);
-
-        // третий поток
-        List<Student> studentList56 = new ArrayList<>();
-
-        StudentGroup group134 = new StudentGroup(studentList56,"543",23);
-
-
-        List<StudentGroup> studentGroups3 = new ArrayList<>();
-        Stream stream3 = new Stream(studentGroups3);
-
-        stream3.studentGroupsList.add(group134);
-
-        // создаю список потоков и группу потоков по этому списку
-        List<Stream> streamList = new ArrayList<>();
-        StreamGroups streamGroups = new StreamGroups(streamList);
-
-        streamGroups.streamList.add(stream1);
-        streamGroups.streamList.add(stream2);
-        streamGroups.streamList.add(stream3);
-
-        StreamService service = new StreamService(streamGroups);
-        for (Stream stream : streamGroups) {
-            System.out.println(stream);
-        }
-        System.out.println();
-        for (Stream stream : service.getSortedStream()) {
-            System.out.println(stream);
-        }
+//        StreamService service = new StreamService(streamGroups);
+//        for (Stream stream : streamGroups) {
+//            System.out.println(stream);
+//        }
+//        System.out.println();
+//        for (Stream stream : service.getSortedStream()) {
+//            System.out.println(stream);
+//        }
 //        for (StudentGroup group : stream) {
 //            System.out.println(group);
 //        }
@@ -106,5 +106,8 @@ public class Main {
 //        for (Student student : service.getSortedStudentGroupByFIO()) {
 //            System.out.println(student);
 //        }
+//        TeacherController teacherController = new TeacherController();
+//        teacherController.viewListOfTeachers();
+
     }
 }
